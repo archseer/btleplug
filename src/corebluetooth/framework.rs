@@ -367,7 +367,7 @@ pub mod cb {
 
     pub fn peripheral_writevalue_forcharacteristic(cbperipheral: *mut Object, value: *mut Object /* NSData* */, characteristic: *mut Object /* CBCharacteristic* */) {
         unsafe {
-            let _: () = msg_send![cbperipheral, writeValue:value forCharacteristic:characteristic type:0]; // CBCharacteristicWriteWithResponse from CBPeripheral.h
+            let _: () = msg_send![cbperipheral, writeValue:value forCharacteristic:characteristic type:1]; // CBCharacteristicWriteWithResponse from CBPeripheral.h
         }
     }
 
